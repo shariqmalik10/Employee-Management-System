@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit()">
+<form *ngIf="showAddEmployee" (ngSubmit)="onSubmit()">
     <div class="mb-3">
         <label for="text" class="form-label"> Name of Employee </label>
         <input type="text" name="name" [(ngModel)]="name" id="name" class="form-control" placeholder=" eg. Sarah Field " />

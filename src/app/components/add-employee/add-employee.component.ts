@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faL } from '@fortawesome/free-solid-svg-icons';
+import { UiService } from 'src/app/services/ui.service';
+import { Subscription } from 'rxjs';
 import { EmployeeList } from 'src/app/emplist';
 
 @Component({
@@ -16,7 +18,12 @@ export class AddEmployeeComponent implements OnInit{
   salary_date: string;
   reminder: boolean = false;
 
-  constructor(){}
+  showAddEmployee: boolean;
+  subscription: Subscription;
+
+  constructor(private uiService: UiService){
+    this.subscription = this.uiService.onToggle().subscribe((value)=>(this.showAddEmployee=value))
+  }
 
   ngOnInit(): void {
   }
@@ -25,7 +32,7 @@ export class AddEmployeeComponent implements OnInit{
     //basic validation for the fields 
 
     if (!this.name) {
-      alert('Please add a task')
+      alert('Please add employee details')
       return;
     }
 

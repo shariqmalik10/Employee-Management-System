@@ -29,7 +29,7 @@
       "join_date": "May 20th",
       "Department": "IT",
       "salaryDue": "June 20th",
-      "reminder": true,
+      "reminder": false,
       "id": 6
     }
   ]
