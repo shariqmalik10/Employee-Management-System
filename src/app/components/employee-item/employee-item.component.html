@@ -1,0 +1,47 @@
+<!-- <table class="table table-hover"> -->
+    <!-- <thead>
+        <th>Name</th>
+        <th>Department</th>
+    </thead> -->
+    <!-- <tbody>
+    <tr>
+        <td>{{employee.Name}}</td>
+        <td>{{employee.Department}}</td>
+    </tr>
+    </tbody>
+</table> -->
+
+
+<!-- Put as list for now -->
+<!-- <div class="list-group">
+    <li class="list-group-item">Name: {{employee.Name}}</li>
+    <li class="list-group-item">Department: {{employee.Department}}</li>
+</div> -->
+
+<!-- Attempt at making table here instead -->
+
+<table class="table table-hover">
+    <thead>
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Join Date</th>
+        <th scope="col">Department</th>
+        <th scope="col">Salary Due</th>
+        <th scope="col">Delete Entry</th>
+        
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{employee.id}}</td>
+        <td>{{employee.Name}}</td>
+        <td>{{employee.join_date}}</td>
+        <td>{{employee.Department}} </td>
+        <button [ngClass]="{reminder: employee.reminder}" class="btn btn-light" (dblclick)="onToggle(employee)"> {{employee.salaryDue}}</button>
+        <td><fa-icon (click) ="onDelete(employee)" [ngStyle]="{color:'red'}"  [icon]="faTimes"></fa-icon></td>
+
+      </tr>
+    </tbody>
+</table>

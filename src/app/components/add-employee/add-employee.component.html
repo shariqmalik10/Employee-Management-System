@@ -1,0 +1,32 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="text" class="form-label"> Name of Employee </label>
+        <input type="text" name="name" [(ngModel)]="name" id="name" class="form-control" placeholder=" eg. Sarah Field " />
+    </div>
+
+    <div class="mb-3">
+        <label for="text" class="form-label"> Join Date </label>
+        <input type="text" name="join_date" [(ngModel)]="join_date" id="join_date" class="form-control" placeholder=" Add Month and Day " />
+    </div>
+
+    <div class="mb-3">
+        <label for="text" class="form-label"> Department </label>
+        <input type="text" name="department" [(ngModel)]="department" id="department" class="form-control" placeholder=" eg. IT " />
+    </div>
+
+    <div class="mb-3">
+        <label for="text" class="form-label"> Salary Due Date </label>
+        <input type="text" name="salary_date" [(ngModel)]="salary_date" id="salary_date" class="form-control" placeholder=" eg. Salary " />
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" name="reminder" [(ngModel)]="reminder" id="reminder">
+        <label class="form-check-label" for="flexCheckDefault">
+          Set Salary Reminder
+        </label>
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary " value="Submit" >Submit</button>
+    </div>
+</form>
