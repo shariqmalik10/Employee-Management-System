@@ -1,5 +1,8 @@
 # EmployeeManagementSystem
 
+This is a project created in AngularJS with a JSON server backend. 
+Purpose of the project is to better understand the concepts of AngularJS. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
 
 ## Development server
