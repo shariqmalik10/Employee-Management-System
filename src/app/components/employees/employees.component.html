@@ -1,17 +1,24 @@
-<!-- <table class="table table-hover">
-    <tr>
-        <th>Name</th>
-        <th>Department</th>
-    </tr>
-    <tr *ngFor="let employee of employees">
-        <td>{{employee.Name}}</td>
-        <td>{{employee.Department}}</td>
-    </tr>
-</table>
- -->
-
+<!--Employee List Table-->
 <app-add-employee (onAddEmployee)="addEmployee($event)"></app-add-employee>
-<app-employee-item *ngFor="let employee of employees" [employee]="employee"  
-(onDeleteEmployee)="deleteEmployee(employee)"
-(onToggleReminder)="toggleReminder(employee)"></app-employee-item>
 
+<table class="table table-hover">
+    <thead>
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Join Date</th>
+        <th scope="col">Department</th>
+        <th scope="col">Salary Due</th>
+        <th scope="col">Delete Entry</th>
+      </tr>
+
+      
+    </thead>
+    <tbody>
+        <tr app-employee-item *ngFor="let employee of employees" [employee]="employee"  
+        (onDeleteEmployee)="deleteEmployee(employee)"
+        (onToggleReminder)="toggleReminder(employee)">
+            
+        </tr>
+    </tbody>
+</table>

@@ -32,7 +32,9 @@ export class EmployeeService {
 
   deleteEmployee(employee: EmployeeList): Observable<EmployeeList> {
     const url = `${this.apiUrl}/${employee.id}`;
+    // return this.http.delete<EmployeeList>(url);
     return this.http.delete<EmployeeList>(url);
+    this.getEmployees
   }
 
   updateSalaryReminder(employee: EmployeeList): Observable<EmployeeList> {

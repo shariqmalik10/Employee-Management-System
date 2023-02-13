@@ -36,6 +36,14 @@ export class AddEmployeeComponent implements OnInit{
       return;
     }
 
+    var letters = /^[A-Za-z]+$/;
+    if (!this.name.match(letters)){
+      alert('Please enter only alphabets')
+      return;
+    }
+
+    //in html add span tag. dynamic message
+
     const newEmployee = {
       Name: this.name,
       join_date: this.join_date,

@@ -8,7 +8,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
-  selector: 'app-employee-item',
+  selector: 'tr[app-employee-item]',
   templateUrl: './employee-item.component.html',
   styleUrls: ['./employee-item.component.scss']
 })
